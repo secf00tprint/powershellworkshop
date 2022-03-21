@@ -46,3 +46,12 @@
 ## Übungsbeschreibung
  
  Lies die Datei info.txt aus und gib sie auf dem Bildschirm aus
+
+# Datei herunterladen
+
+## Übungsbeschreibung
+Lade folgende Datei über powershell herunter
+https://raw.githubusercontent.com/secf00tprint/powershellworkshop/main/droppercontent
+
+## Hilfe
+Recherchiere zu der System.Net.WebClient Klasse
