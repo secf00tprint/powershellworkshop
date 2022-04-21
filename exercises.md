@@ -46,3 +46,26 @@
 ## Übungsbeschreibung
  
  Lies die Datei info.txt aus und gib sie auf dem Bildschirm aus
+
+# Datei herunterladen
+
+## Übungsbeschreibung
+Lade folgende Datei über powershell herunter
+https://raw.githubusercontent.com/secf00tprint/powershellworkshop/main/droppercontent
+
+## Hilfe
+Recherchiere zu der System.Net.WebClient Klasse
+
+$file = "C:\test.txt"
+$ftpuri = "ftp://test:123qwe@192.168.2.222/test.txt"
+$webclient = New-Object System.Net.WebClient
+$uri = New-Object System.Uri($ftpuri)
+$webclient.DownloadFile($uri, $file)
+
+$file = "C:\test.txt"
+$password"test"
+$user="123qwe"
+$ftpuri = "ftp://"+ $user + $password + "@192.168.2.222/test.txt"
+$webclient = New-Object System.Net.WebClient
+$uri = New-Object System.Uri($ftpuri)
+$webclient.DownloadFile($uri, $file)
