@@ -56,6 +56,26 @@ https://raw.githubusercontent.com/secf00tprint/powershellworkshop/main/dropperco
 ## Hilfe
 Recherchiere zu der System.Net.WebClient Klasse
 
+# Datei über ftp herunterladen
+
+## Übungsbeschreibung
+https://hub.docker.com/r/garethflowers/ftp-server
+fahre folgenden ftp server hoch mit folgendem Befehl.
+
+docker run \
+	--name my-ftp-server \
+	--detach \
+	--env FTP_USER=c2cmdgod \
+	--env FTP_PASS=c2cmdgod \
+	--network host \
+	--volume /data:/home/user \
+	garethflowers/ftp-server
+
+
+## Hilfe
+Schaue dir die System.Net.WebClient Klasse in bezug auf ftp an
+
+## Beispiellösungen 
 $file = "C:\test.txt"
 $ftpuri = "ftp://test:123qwe@192.168.2.222/test.txt"
 $webclient = New-Object System.Net.WebClient
@@ -63,9 +83,29 @@ $uri = New-Object System.Uri($ftpuri)
 $webclient.DownloadFile($uri, $file)
 
 $file = "C:\test.txt"
-$password"test"
+$password="test"
 $user="123qwe"
-$ftpuri = "ftp://"+ $user + $password + "@192.168.2.222/test.txt"
+$ftpuri = "ftp://"+ $user +":"+ $password + "@192.168.2.222/test.txt"
 $webclient = New-Object System.Net.WebClient
 $uri = New-Object System.Uri($ftpuri)
 $webclient.DownloadFile($uri, $file)
+
+# Datei über ftp hochladen
+
+## Übungsbeschreibung 
+Lade über das ftp protokoll folgende Datei vom beigelieferten vsftp server hoch:
+
+## Hilfe
+Ähnliches vorgehen wie in vorangegangener Aufgabe.
+
+## Beispiellösung
+
+$file = "C:\test.txt"
+$password"test"
+$user="123qwe"
+$ftpuri = "ftp://"+ $user +":"+ $password + "@192.168.2.222/test.txt"
+$webclient = New-Object System.Net.WebClient
+$uri = New-Object System.Uri($ftpuri)
+$webclient.UploadFile($uri, $file)
+
+
