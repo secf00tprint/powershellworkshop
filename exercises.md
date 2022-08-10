@@ -54,7 +54,9 @@
  
  Lies die Datei info.txt aus und gib sie auf dem Bildschirm aus
  
- ## Lösung
+## Lösung
+
+x nachzupflegen
 
 # Datei herunterladen
 
@@ -65,6 +67,10 @@ https://raw.githubusercontent.com/secf00tprint/powershellworkshop/main/dropperco
 
 ## Hilfe
 Recherchiere zu der System.Net.WebClient Klasse
+
+## Lösung 
+
+x nachzupflegen
 
 # Datei über ftp herunterladen
 
