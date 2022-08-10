@@ -38,14 +38,18 @@
  
 ## Hilfe
  Nutze Google "Write string to file powershell"
- 
-# Datei auslesen
- 
- "I was here, I pwnd your system, muahaha" | Out-File .\info.txt
+
+## Lösung
+
+"I was here, I pwnd your system, muahaha" | Out-File .\info.txt
+
+# Datei auslesen 
  
 ## Übungsbeschreibung
  
  Lies die Datei info.txt aus und gib sie auf dem Bildschirm aus
+ 
+ ## Lösung
 
 # Datei herunterladen
 
