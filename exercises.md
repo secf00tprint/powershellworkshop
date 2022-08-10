@@ -129,7 +129,7 @@ $ftpuri = "ftp://"+ $user +":"+ $password + "@192.168.2.222/test.txt"
 $webclient = New-Object System.Net.WebClient
 $uri = New-Object System.Uri($ftpuri)
 $webclient.UploadFile($uri, $file)
-``
+```
 
 # timing Aufgaben
 
