@@ -63,7 +63,7 @@ https://hub.docker.com/r/garethflowers/ftp-server
 fahre folgenden ftp server hoch mit folgendem Befehl.
 
 docker run \
-	--name my-ftp-server \
+	--name c2server \
 	--detach \
 	--env FTP_USER=c2cmdgod \
 	--env FTP_PASS=c2cmdgod \
@@ -107,5 +107,7 @@ $ftpuri = "ftp://"+ $user +":"+ $password + "@192.168.2.222/test.txt"
 $webclient = New-Object System.Net.WebClient
 $uri = New-Object System.Uri($ftpuri)
 $webclient.UploadFile($uri, $file)
+
+# timing Aufgaben
 
 
