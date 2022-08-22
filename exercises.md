@@ -133,4 +133,13 @@ $webclient.UploadFile($uri, $file)
 
 # timing Aufgaben
 
+## Hilfe
+Anschaun der Klassen New-ScheduledTaskTrigger, New-ScheduledTaskAction und Register-ScheduledTask
 
+## Beispiellösung
+```
+$t = New-ScheduledTaskTrigger -Daily -At 13:20:00
+$a = New-ScheduledTaskAction -Execute "explorer"
+
+Register-ScheduledTask Task001 -Action $a -Trigger $t
+```
