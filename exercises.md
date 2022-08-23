@@ -70,10 +70,12 @@ https://raw.githubusercontent.com/secf00tprint/powershellworkshop/main/dropperco
 Recherchiere zu der System.Net.WebClient Klasse
 
 ## Lösung 
+```
 $webclient = New-Object System.Net.WebClient
 $url = "https://raw.githubusercontent.com/secf00tprint/powershellworkshop/main/droppercontent"
 $filename = "droppercontent"
 $webclient.DownloadFile($url, $filename)
+
 
 # Datei über ftp herunterladen
 
