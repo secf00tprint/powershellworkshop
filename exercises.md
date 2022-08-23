@@ -150,3 +150,12 @@ $a = New-ScheduledTaskAction -Execute "explorer"
 
 Register-ScheduledTask Task001 -Action $a -Trigger $t
 ```
+
+# SSH Session zum kommunizieren mit C2
+
+## Übungsbeschreibung
+Verbinde dich per Powershell mit dem SSH server der sich mit im docker befindet und führe ... Befehl aus.
+
+## Hilfe
+
+## Beispiellösung
