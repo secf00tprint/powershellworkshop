@@ -139,6 +139,8 @@ $webclient.UploadFile($uri, $file)
 ```
 
 # timing Aufgaben
+## Übungsbeschreibung
+Richte einen scheduled task ein, der Täglich zu einer bestimmten Zeit Aufgaben ausführ.
 
 ## Hilfe
 Anschaun der Klassen New-ScheduledTaskTrigger, New-ScheduledTaskAction und Register-ScheduledTask
@@ -157,5 +159,19 @@ Register-ScheduledTask Task001 -Action $a -Trigger $t
 Verbinde dich per Powershell mit dem SSH server der sich mit im docker befindet und führe ... Befehl aus.
 
 ## Hilfe
+Zur vereinfachung nutzen wir das Powershell Modul Posh-SSH
+https://github.com/darkoperator/Posh-SSH
+Module kann man direkt über Install-Module installiere, siehe drüber stehendes Repo für installationsanweisungen.
 
 ## Beispiellösung
+### Installieren
+Install-Module -Name Posh-SSH
+### Session etablieren
+$h = "127.0.0.1"
+$port = 22
+$user = "admin"
+$password = ConvertTo-SecureString 'admin' -AsPlainText -Force 
+$Credential = New-Object System.Management.Automation.PSCredential ($user, $password)
+$ss = New-SSHSession -ComputerName $h -Port $port -Force
+### Commands ausführen
+Invoke-SSHCommand -Command "ls -a" -SSHSession $ss
